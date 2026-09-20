@@ -183,7 +183,7 @@ public:
             const auto pColon = _uri.find(':', p + 3); // FIXME: this fails for IPv6 addresses
             const auto pSlash = _uri.find('/', p + 3);
             if (pColon == std::string::npos || (pSlash != std::string::npos && pColon > pSlash)) {
-                auto tmp = _uri.substr(0, pSlash) + ":38281";
+                auto tmp = _uri.substr(0, pSlash) + ":443";
                 if (pSlash != std::string::npos) tmp += _uri.substr(pSlash);
                 _uri = tmp;
             }
